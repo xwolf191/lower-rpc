@@ -1,0 +1,11 @@
+plugins {
+    id 'java'
+}
+
+group 'com.bili'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile group: 'com.alibaba', name: 'fastjson', version: "$fastjsonVersion"
+    compile group: 'com.esotericsoftware', name: 'kryo', version: "$kryoVersion"
+}

@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+}
+
+group 'com.bili'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+subprojects {
+    //apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    version = '1.0-SNAPSHOT'
+    //jdk版本
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    //字符集
+    [compileJava,compileTestJava,javadoc]*.options*.encoding = 'UTF-8'
+
+    repositories {
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        mavenCentral()
+    }
+
+    ext {
+        junitVersion = '4.12'
+        lombokVersion = '1.18.6'
+        fastjsonVersion = '1.2.57'
+        kryoVersion = '4.0.2'
+    }
+    /*所有子模块的公共依赖*/
+    dependencies {
+        testCompile group: "junit", name: "junit", version: "$junitVersion"
+        runtime  group: 'org.projectlombok', name: 'lombok', version: "$lombokVersion"
+    }
+}
+
