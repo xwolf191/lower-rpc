@@ -30,10 +30,10 @@ subprojects {
         fastjsonVersion = '1.2.57'
         kryoVersion = '4.0.2'
     }
-    /*所有子模块的公共依赖*/
+    /* 所有子模块的公共依赖 */
     dependencies {
-        testCompile group: "junit", name: "junit", version: "$junitVersion"
-        runtime  group: 'org.projectlombok', name: 'lombok', version: "$lombokVersion"
+       // testCompile group: "junit", name: "junit", version: "$junitVersion"
+       // runtime  group: 'org.projectlombok', name: 'lombok', version: "1.18.6"
     }
 }
 

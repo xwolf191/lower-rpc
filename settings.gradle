@@ -3,5 +3,3 @@ include 'lower-common'
 include 'lower-serialize'
 include 'lower-serialize:lower-serialize-kryo'
 include 'lower-serialize:lower-serialize-api'
-findProject(':lower-serialize:lower-serialize-api')?.name = 'lower-serialize-api'
-
